@@ -1,0 +1,12 @@
+L = [1,2,3,4,5]
+n = len(L)
+
+def f(i):
+    if i >= (n / 2):
+        return
+
+    L[i], L[n-i-1] = L[n-i-1], L[i]
+    f(i + 1)
+
+f(0)
+print(L)
